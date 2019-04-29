@@ -6,7 +6,7 @@ xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controlle
 xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
 xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
    
-    <property name="M_PI" value="3.1415926535897931" />
+    <xacro:property name="M_PI" value="3.1415926535897931" />
     
     <!-- Included URDF Files -->
     <xacro:include filename="$(find cvg_sim_gazebo)/urdf/quadrotor_base.urdf.xacro" />

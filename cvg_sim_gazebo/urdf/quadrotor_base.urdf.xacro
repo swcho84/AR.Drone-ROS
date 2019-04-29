@@ -7,7 +7,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
 >
 
   <xacro:include filename="$(find cvg_sim_gazebo_plugins)/urdf/quadrotor_plugins.urdf.xacro" />
-  <property name="pi" value="3.1415926535897931" />
+  <xacro:property name="pi" value="3.1415926535897931" />
 
   <!-- Main quadrotor link -->
   <xacro:macro name="quadrotor_base_macro">
