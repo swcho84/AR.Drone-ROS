@@ -11,6 +11,8 @@ These packages are used to simulate the flying robot Ardrone in ROS environment 
 
 4. cvg_sim_msgs: contains message forms for the simulator.
 
+5. (optional) teleop_twist_keyboard: if you use your own keyboard to control the quadcopter model in the gazebo environment, you can use this package. Please check this link: http://wiki.ros.org/teleop_twist_keyboard
+
 Some packages are based on the tu-darmstadt-ros-pkg by Stefan Kohlbrecher, TU Darmstadt.
 
 This package depends on ardrone_autonomy package and gazebo7 so install these first.
