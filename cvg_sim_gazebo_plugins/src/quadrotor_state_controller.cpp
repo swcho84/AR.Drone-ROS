@@ -99,6 +99,11 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
   else
     state_topic_ = _sdf->GetElement("stateTopic")->Get<std::string>();
 
+  if (!_sdf->HasElement("poseGroundTruthTopic"))
+    pose_groundtruth_topic_ = "/ardrone/pose_groundtruth";
+  else
+    pose_groundtruth_topic_ = _sdf->GetElement("poseGroundTruthTopic")->Get<std::string>();
+
   if (!_sdf->HasElement("bodyName"))
   {
     link = _model->GetLink();
@@ -157,12 +162,11 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
     reset_subscriber_ = node_handle_->subscribe(ops);
   }
 
-  	// publish navdata and navdataraw
-    m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( navdata_topic_ , 25 );
-    m_navdatarawPub = node_handle_->advertise< ardrone_autonomy::navdata_raw_measures >( navdataraw_topic_ , 25 );
-
-
-
+  // publish navdata and navdataraw
+  m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( navdata_topic_ , 25 );
+  m_navdatarawPub = node_handle_->advertise< ardrone_autonomy::navdata_raw_measures >( navdataraw_topic_ , 25 );
+  m_poseGtPub = node_handle_->advertise< geometry_msgs::PoseStamped >( pose_groundtruth_topic_ , 1 );
+  
   // subscribe imu
   if (!imu_topic_.empty())
   {
@@ -294,11 +298,28 @@ void GazeboQuadrotorStateController::StateCallback(const nav_msgs::OdometryConst
     angular_velocity.Set(state->twist.twist.angular.x, state->twist.twist.angular.y, state->twist.twist.angular.z);
   }
 
+  // ground-truth position
+  posX_ = state->pose.pose.position.x;
+  posY_ = state->pose.pose.position.y;
+  posZ_ = state->pose.pose.position.z;
+
+  // ground-truth quaternion
+  qX_ = state->pose.pose.orientation.x;
+  qY_ = state->pose.pose.orientation.y;
+  qZ_ = state->pose.pose.orientation.z;
+  qW_ = state->pose.pose.orientation.w; 
+
+  // for debugging
+  // ROS_INFO_DELAYED_THROTTLE(0.5, "Pose(x,y,z):(%.4f,%.4f,%.4f", posX_, posY_, posZ_);
+  // ROS_INFO_DELAYED_THROTTLE(0.5, "Pose(r,p,y):(%.4f,%.4f,%.4f", euler.x, euler.y, euler.z);
+  // ROS_INFO_DELAYED_THROTTLE(0.5, " ");
+
   velocity.Set(state->twist.twist.linear.x, state->twist.twist.linear.y, state->twist.twist.linear.z);
 
   // calculate acceleration
   double dt = !state_stamp.isZero() ? (state->header.stamp - state_stamp).toSec() : 0.0;
   state_stamp = state->header.stamp;
+  nseq_ = state->header.seq;
   if (dt > 0.0) {
     acceleration = (velocity - velocity1) / dt;
   } else {
@@ -487,6 +508,19 @@ void GazeboQuadrotorStateController::Update()
   navdataraw.gradient = 0;
 
   m_navdatarawPub.publish( navdataraw );
+
+  geometry_msgs::PoseStamped poseGtData;
+  poseGtData.header.seq = nseq_;
+  poseGtData.header.stamp = ros::Time::now();
+  poseGtData.header.frame_id = "ardrone_base_link";
+  poseGtData.pose.position.x = posX_;
+  poseGtData.pose.position.y = posY_;
+  poseGtData.pose.position.z = posZ_;
+  poseGtData.pose.orientation.x = qX_;
+  poseGtData.pose.orientation.y = qY_;
+  poseGtData.pose.orientation.z = qZ_;
+  poseGtData.pose.orientation.w = qW_;
+  m_poseGtPub.publish( poseGtData );
 
   // save last time stamp
   last_time = sim_time;

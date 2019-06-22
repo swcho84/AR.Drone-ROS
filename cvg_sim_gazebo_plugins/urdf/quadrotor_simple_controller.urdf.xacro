@@ -10,7 +10,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
     <gazebo>
       <plugin name="quadrotor_simple_controller" filename="libhector_gazebo_quadrotor_simple_controller.so">
         <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
+        <updateRate>400.0</updateRate>
         <bodyName>base_link</bodyName>
         <stateTopic>ground_truth/state</stateTopic>
         <imuTopic>ardrone/imu</imuTopic>
@@ -18,7 +18,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <rollpitchProportionalGain>10.0</rollpitchProportionalGain>
         <rollpitchDifferentialGain>5.0</rollpitchDifferentialGain>
         <rollpitchLimit>0.5</rollpitchLimit>
-        <yawProportionalGain>2.0</yawProportionalGain>
+        <yawProportionalGain>3.5</yawProportionalGain>
         <yawDifferentialGain>1.0</yawDifferentialGain>
         <yawLimit>1.5</yawLimit>
         <velocityXYProportionalGain>5.0</velocityXYProportionalGain>
@@ -28,8 +28,8 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <velocityZDifferentialGain>1.0</velocityZDifferentialGain>
         <velocityZLimit>0.5</velocityZLimit>
         <maxForce>30</maxForce>
-        <motionSmallNoise>0.01</motionSmallNoise>
-        <motionDriftNoise>0.015</motionDriftNoise>
+        <motionSmallNoise>0.0001</motionSmallNoise>
+        <motionDriftNoise>0.00015</motionDriftNoise>
         <motionDriftNoiseTime>1.0</motionDriftNoiseTime>
       </plugin>
 

@@ -1,0 +1,292 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- sun light model -->
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 1000 0 -1.0 0</pose>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
+      <specular>1.0 1.0 1.0 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- grass field for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://grass_field</uri>
+    </include>
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_center</name>
+      <static>true</static>
+      <pose>-30.0 0 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag0</uri>
+      <name>ar_tag_0_center</name>
+      <static>true</static>
+      <pose>-29.35 0 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_center_right</name>
+      <static>true</static>
+      <pose>-30.0 -0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_center_left</name>
+      <static>true</static>
+      <pose>-30.0 0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_center_backward</name>
+      <static>true</static>
+      <pose>-30.65 0 0.1 0 -1.570796 0</pose>
+    </include>    
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_right</name>
+      <static>true</static>
+      <pose>-30.0 -7.5 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag1</uri>
+      <name>ar_tag_1_right</name>
+      <static>true</static>
+      <pose>-29.35 -7.5 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_right_right</name>
+      <static>true</static>
+      <pose>-30.0 -8.15 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_right_left</name>
+      <static>true</static>
+      <pose>-30.0 -6.85 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_right_backward</name>
+      <static>true</static>
+      <pose>-30.65 -7.5 0.1 0 -1.570796 0</pose>
+    </include>       
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_left</name>
+      <static>true</static>
+      <pose>-30.0 7.5 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag2</uri>
+      <name>ar_tag_2_left</name>
+      <static>true</static>
+      <pose>-29.35 7.5 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_left_right</name>
+      <static>true</static>
+      <pose>-30.0 6.85 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_left_left</name>
+      <static>true</static>
+      <pose>-30.0 8.15 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_left_backward</name>
+      <static>true</static>
+      <pose>-30.65 7.5 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_foward</name>
+      <static>true</static>
+      <pose>-22.5 0 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag3</uri>
+      <name>ar_tag_3_forward</name>
+      <static>true</static>
+      <pose>-21.85 0.0 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_forward_right</name>
+      <static>true</static>
+      <pose>-22.5 -0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_forward_left</name>
+      <static>true</static>
+      <pose>-22.5 0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_forward_backward</name>
+      <static>true</static>
+      <pose>-23.15 0.0 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_endpoint</name>
+      <static>true</static>
+      <pose>20.0 0 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag4</uri>
+      <name>ar_tag_4_forward</name>
+      <static>true</static>
+      <pose>20.65 0.0 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_endpoint_right</name>
+      <static>true</static>
+      <pose>20 -0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_endpoint_left</name>
+      <static>true</static>
+      <pose>20 0.65 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_endpoint_backward</name>
+      <static>true</static>
+      <pose>19.35 0.0 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <!-- red traffic cone for rendering the drone-pliot test field -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <name>red_traffic_cone_emergency_point</name>
+      <static>true</static>
+      <pose>-37.5 7.5 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag5</uri>
+      <name>ar_tag_5_emergency</name>
+      <static>true</static>
+      <pose>-36.85 7.5 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag7</uri>
+      <name>ar_tag_7_emergency_right</name>
+      <static>true</static>
+      <pose>-37.5 6.85 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag8</uri>
+      <name>ar_tag_8_emergency_left</name>
+      <static>true</static>
+      <pose>-37.5 8.15 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <include>
+      <uri>model://ar_alvar_tag9</uri>
+      <name>ar_tag_9_emergency_backward</name>
+      <static>true</static>
+      <pose>-38.15 7.5 0.1 0 -1.570796 0</pose>
+    </include>
+
+    <!-- Earth model -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>37.496994</latitude_deg>
+      <longitude_deg>127.041889</longitude_deg>
+      <elevation>0.0</elevation> <!-- in meters -->
+      <heading_deg>0</heading_deg> <!-- in degrees -->
+    </spherical_coordinates>
+
+    <!-- Physics model -->
+    <physics type='ode'>
+      <enable_physics>1</enable_physics>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters> <!-- simulating iterations per one step -->
+          <sor>1.4</sor>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>          
+        </constraints>
+      </ode>
+      <max_step_size>0.0025</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>400</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    
+    <!-- Scene model -->
+    <scene>
+      <ambient>1.0 1.0 1.0 1</ambient>
+      <background>1.0 1.0 1.0 1</background>
+      <shadows>1</shadows>
+      <clouds>
+        <speed>12</speed>
+      </clouds>
+    </scene>
+
+    <!-- viewpoint model -->
+    <gui fullscreen='0'>
+      <camera name='user_default'>
+        <pose frame=''>-61.1472 -0.720037 14.5137 0 0.364 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  
+  </world>
+</sdf>

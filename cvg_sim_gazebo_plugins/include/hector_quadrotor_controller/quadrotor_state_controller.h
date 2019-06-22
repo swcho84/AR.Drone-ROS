@@ -20,6 +20,7 @@
 #include <ros/callback_queue.h>
 #include <ros/ros.h>
 
+#include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/Imu.h>
 #include <sensor_msgs/Range.h>
@@ -83,7 +84,7 @@ private:
 
   ros::Publisher m_navdataPub;
   ros::Publisher m_navdatarawPub;
-
+  ros::Publisher m_poseGtPub;
 
   // extra camera control command
   int                              m_selected_cam_num;
@@ -139,10 +140,20 @@ private:
   std::string reset_topic_;
   std::string navdata_topic_;
   std::string navdataraw_topic_;
+  std::string pose_groundtruth_topic_;
 
   std::string imu_topic_;
   std::string sonar_topic_;
   std::string state_topic_;
+
+  int nseq_;
+  double posX_;
+  double posY_;
+  double posZ_;
+  double qX_;
+  double qY_;
+  double qZ_;
+  double qW_;
 
   // extra parameters for robot control.
   bool m_isFlying;
