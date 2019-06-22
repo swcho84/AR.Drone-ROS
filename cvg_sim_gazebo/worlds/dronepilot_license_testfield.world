@@ -34,29 +34,29 @@
       <uri>model://ar_alvar_tag0</uri>
       <name>ar_tag_0_center</name>
       <static>true</static>
-      <pose>-29.35 0 0.1 0 -1.570796 0</pose>
+      <pose>-29.0 0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_center_right</name>
       <static>true</static>
-      <pose>-30.0 -0.65 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 -1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_center_left</name>
       <static>true</static>
-      <pose>-30.0 0.65 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_center_backward</name>
       <static>true</static>
-      <pose>-30.65 0 0.1 0 -1.570796 0</pose>
-    </include>    
+      <pose>-31.0 0 0.1 0 -1.570796 0</pose>
+    </include>
 
     <!-- red traffic cone for rendering the drone-pliot test field -->
     <include>
@@ -70,29 +70,29 @@
       <uri>model://ar_alvar_tag1</uri>
       <name>ar_tag_1_right</name>
       <static>true</static>
-      <pose>-29.35 -7.5 0.1 0 -1.570796 0</pose>
+      <pose>-29.0 -7.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_right_right</name>
       <static>true</static>
-      <pose>-30.0 -8.15 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 -8.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_right_left</name>
       <static>true</static>
-      <pose>-30.0 -6.85 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 -6.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_right_backward</name>
       <static>true</static>
-      <pose>-30.65 -7.5 0.1 0 -1.570796 0</pose>
-    </include>       
+      <pose>-31.0 -7.5 0.1 0 -1.570796 0</pose>
+    </include>
 
     <!-- red traffic cone for rendering the drone-pliot test field -->
     <include>
@@ -106,28 +106,28 @@
       <uri>model://ar_alvar_tag2</uri>
       <name>ar_tag_2_left</name>
       <static>true</static>
-      <pose>-29.35 7.5 0.1 0 -1.570796 0</pose>
+      <pose>-29.0 7.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_left_right</name>
       <static>true</static>
-      <pose>-30.0 6.85 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 6.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_left_left</name>
       <static>true</static>
-      <pose>-30.0 8.15 0.1 0 -1.570796 0</pose>
+      <pose>-30.0 8.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_left_backward</name>
       <static>true</static>
-      <pose>-30.65 7.5 0.1 0 -1.570796 0</pose>
+      <pose>-31.0 7.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <!-- red traffic cone for rendering the drone-pliot test field -->
@@ -142,28 +142,28 @@
       <uri>model://ar_alvar_tag3</uri>
       <name>ar_tag_3_forward</name>
       <static>true</static>
-      <pose>-21.85 0.0 0.1 0 -1.570796 0</pose>
+      <pose>-21.5 0.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_forward_right</name>
       <static>true</static>
-      <pose>-22.5 -0.65 0.1 0 -1.570796 0</pose>
+      <pose>-22.5 -1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_forward_left</name>
       <static>true</static>
-      <pose>-22.5 0.65 0.1 0 -1.570796 0</pose>
+      <pose>-22.5 1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_forward_backward</name>
       <static>true</static>
-      <pose>-23.15 0.0 0.1 0 -1.570796 0</pose>
+      <pose>-23.5 0.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <!-- red traffic cone for rendering the drone-pliot test field -->
@@ -178,28 +178,28 @@
       <uri>model://ar_alvar_tag4</uri>
       <name>ar_tag_4_forward</name>
       <static>true</static>
-      <pose>20.65 0.0 0.1 0 -1.570796 0</pose>
+      <pose>21.0 0.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_endpoint_right</name>
       <static>true</static>
-      <pose>20 -0.65 0.1 0 -1.570796 0</pose>
+      <pose>20.0 -1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_endpoint_left</name>
       <static>true</static>
-      <pose>20 0.65 0.1 0 -1.570796 0</pose>
+      <pose>20.0 1.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_endpoint_backward</name>
       <static>true</static>
-      <pose>19.35 0.0 0.1 0 -1.570796 0</pose>
+      <pose>19.0 0.0 0.1 0 -1.570796 0</pose>
     </include>
 
     <!-- red traffic cone for rendering the drone-pliot test field -->
@@ -214,28 +214,28 @@
       <uri>model://ar_alvar_tag5</uri>
       <name>ar_tag_5_emergency</name>
       <static>true</static>
-      <pose>-36.85 7.5 0.1 0 -1.570796 0</pose>
+      <pose>-36.5 7.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag7</uri>
       <name>ar_tag_7_emergency_right</name>
       <static>true</static>
-      <pose>-37.5 6.85 0.1 0 -1.570796 0</pose>
+      <pose>-37.5 6.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag8</uri>
       <name>ar_tag_8_emergency_left</name>
       <static>true</static>
-      <pose>-37.5 8.15 0.1 0 -1.570796 0</pose>
+      <pose>-37.5 8.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <include>
       <uri>model://ar_alvar_tag9</uri>
       <name>ar_tag_9_emergency_backward</name>
       <static>true</static>
-      <pose>-38.15 7.5 0.1 0 -1.570796 0</pose>
+      <pose>-38.5 7.5 0.1 0 -1.570796 0</pose>
     </include>
 
     <!-- Earth model -->
