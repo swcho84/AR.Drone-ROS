@@ -79,7 +79,7 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
           </image>
 
           <clip>0.01
-	    <near>0.01</near>
+	          <near>0.01</near>
             <far>100</far>
           </clip>
         </camera>

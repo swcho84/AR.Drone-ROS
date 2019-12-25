@@ -238,6 +238,13 @@
       <pose>-38.5 7.5 0.1 0 -1.570796 0</pose>
     </include>
 
+    <include>
+      <uri>model://circle_lane</uri>
+      <name>circle_lane</name>
+      <static>true</static>
+      <pose>-33.7 -1.35	-6.4 0 0 0</pose>
+    </include>
+
     <!-- Earth model -->
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
