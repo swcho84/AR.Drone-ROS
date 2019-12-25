@@ -14,10 +14,10 @@ xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
     <!-- Instantiate quadrotor_base_macro once (has no parameters atm) -->
     <quadrotor_base_macro />
 
-    <!-- Gimbal  -->
+    <!-- Gimbal  
     <xacro:gimbal_macro namespace="${namespace}">
       <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:gimbal_macro>
+    </xacro:gimbal_macro> -->
     
     <!-- Sonar height sensor -->
     <xacro:include filename="$(find cvg_sim_gazebo)/urdf/sensors/sonar_sensor.urdf.xacro" />
